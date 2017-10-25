@@ -1,0 +1,53 @@
+import java.io.Console;
+
+public class identitas {
+    public static void main(String[] args) {
+
+        String nama,alamat,jurusan;
+        char kelas;
+        int npm;
+
+        // membuat objek console
+        Console con = System.console();
+
+        // mengisi variabel nama, alamat, jurusan, dan npm dengan console
+        System.out.println("");
+        System.out.println("PROGRAM IDENTITAS");
+        System.out.println("==================================");
+
+        System.out.println("");
+        System.out.print("Masukkan Nama         : ");
+        nama = con.readLine();
+
+        System.out.print("Masukkan Alamat       : ");
+        alamat = con.readLine();
+
+        System.out.print("Masukkan Jurusan      : ");
+        jurusan = con.readLine();
+
+        System.out.print("Masukkan NPM          : ");
+        npm = Integer.parseInt(con.readLine());
+
+        System.out.println("");
+
+        //Proses kode
+        if (npm <= 167006040){
+            kelas = 'A';
+        }
+        else if (npm <= 167006080){
+            kelas = 'B';
+        }
+        else {
+            kelas = 'C';
+        }
+
+        // menampilkan isi variabel nama, alamat, jurusan, npm, dan kelas dari variabel npm
+        System.out.println("==================================");
+        System.out.println("");
+        System.out.println("Nama kamu adalah        : " + nama);
+        System.out.println("Alamat kamu ada di      : " + alamat);
+        System.out.println("Jurusan kamu adalah     : " + jurusan);
+        System.out.println("NPM kamu adalah         : " + npm);
+        System.out.println("Jadi, Kelas kamu adalah : " + kelas);
+    }
+}
